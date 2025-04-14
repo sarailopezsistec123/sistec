@@ -1,0 +1,12 @@
+th{
+    font-size: 20px;
+    font-family:verdana ;
+    background-color: mediumblue;
+    color: aliceblue;
+}
+td{
+    font-family: sans-serif;
+    color: blueviolet;
+    font-size:18px ;
+    background-color: aliceblues;
+}

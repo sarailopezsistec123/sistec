@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordena tu Pollo Campero</title>
+  <style>
+    :root {
+      --campero-yellow: #f9c300;
+      --campero-red: #b6281a;
+      --campero-brown: #5a2c00;
+      --background-light: #fffaf0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background-light);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      border: 3px solid var(--campero-red);
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container h1 {
+      text-align: center;
+      color: var(--campero-brown);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      color: var(--campero-brown);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      background-color: var(--campero-yellow);
+      color: var(--campero-brown);
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #e0b000;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 20px;
+      color: var(--campero-red);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Ordena tu Pollo Campero</h1>
+    <form action="#" method="POST">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="direccion">Dirección de entrega:</label>
+      <textarea id="direccion" name="direccion" required></textarea>
+
+      <label for="orden">Selecciona tu orden:</label>
+      <select id="orden" name="orden" required>
+        <option value="">-- Elige una opción --</option>
+        <option value="combo-1">Combo 1: 2 piezas + papas + bebida</option>
+        <option value="combo-2">Combo 2: 3 piezas + arroz + bebida</option>
+        <option value="combo-3">Combo familiar: 8 piezas + 2 guarniciones</option>
+        <option value="solo-pollo">Solo Pollo: 5 piezas</option>
+      </select>
+
+      <label for="comentarios">Comentarios adicionales:</label>
+      <textarea id="comentarios" name="comentarios" placeholder="¿Instrucciones especiales?"></textarea>
+
+      <button type="submit" class="submit-btn">Enviar Pedido</button>
+    </form>
+    <div class="footer">¡Gracias por elegir Pollo Campero!</div>
+  </div>
+</body>
+</html>
